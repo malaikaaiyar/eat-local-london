@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Suppliers</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">title</h1>
+        <p>stay at home blah blah blah</p>
+            <% for (let category of categories) { %>
+                <!-- <div style="background-image: url('<%=  category.imageUrl %>');" class="link-box" > -->
+                <div class="link-box">
+                    <img src="<%= category.imageUrl %>">
+                    <h1><a href="category/<%= category.title %>"><%= category.title %></a></h1>
+                </div>
+            <% } %>
+    </div>
+</body>
+</html>

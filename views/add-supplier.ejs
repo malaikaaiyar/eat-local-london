@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>add supplier</title>
+</head>
+<body>
+    <main>
+        <form action="/add-supplier" method="POST">
+            <div class="form-control">
+                <label for="title">Title</label>
+                <input type="text" name="title" id="title">
+                <br>
+                <label for="description">Description</label>
+                <input type="text" name="description" id="description">
+                <br>
+                <label for="link">URL</label>
+                <input type="text" name="url" id="url">
+                <hr>
+                <p>categories</p>
+                <input type="checkbox" name="category" value="fresh fruit and veg">
+                <label for="fresh">fresh fruit and veg</label>
+                <br>
+                <input type="checkbox" name="category" value="meat and seafood">
+                <label for="fresh">meat and seafood</label>
+                <br>
+                <input type="checkbox" name="category" value="non-perishables">
+                <label for="fresh">non-perishables</label>
+                <br>
+                <input type="checkbox" name="category" value="perishable ingredients">
+                <label for="fresh">perishable ingredients</label>
+                <br>
+                <input type="checkbox" name="category" value="meal kits">
+                <label for="fresh">meal kits</label>
+                <br>
+                <input type="checkbox" name="category" value="sustainable options">
+                <label for="fresh">sustainable options</label>
+                <br>
+                <input type="checkbox" name="category" value="world foods">
+                <label for="fresh">world foods</label>
+                <br>
+                <input type="checkbox" name="category" value="alcoholic beverages">
+                <label for="fresh">alcoholic beverages</label>
+
+
+            </div>
+
+            <button type="submit">add</button>
+        </form>
+    </main>
+</body>
+</html>

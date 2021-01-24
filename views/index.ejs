@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Local Businesses in London</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alatsi">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alef">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather+Sans">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Footer-Dark.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-light navbar-expand-md fixed-top navigation-clean" style="background: #ffffff;">
+            <div class="container"><a class="navbar-brand" href="/" style="color: #167cd0;font-family: Quicksand, sans-serif;">Covid helper</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item"></li>
+                        <li class="nav-item"></li>
+                        <li class="nav-item"></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div data-bs-hover-animate="pulse" style="background: #ffffba;padding: 50px;margin-bottom: 40px;width: 100%;height: 100vh;">
+        <h1 class="display-2 text-center" style="margin-top: 20vh;margin-bottom: 40px;color: #167cd0;font-family: Quicksand, sans-serif;letter-spacing: .02em;vertical-align: middle;text-align: center;">Local businesses in London need your help.</h1>
+    </div>
+    <div class="container">
+        <p style="color:  #167cd0;padding: 1em;text-align: left;">
+            In the pandemic, local businesses have been hit the hardest by the lack of in-person shoppers. Many of my friends and I would love to support more local businesses but we are limited to shops near us, and of those many have closed down due to the lack
+            of customers, and we resort to mainstream grocers. By making more people aware of local businesses that deliver, not only do we support the business, but we also support vulnerable people by leaving the limited delivery slots of mainstream
+            supermarkets open to those who need it. Additionally, many of these companies are environmentally aware or ethical about how they source their products. I hope you find a company that fits your needs and support them. Thank you!
+
+        </p>
+    </div>
+    <div style="height: 100px"></div>
+    <div class="container">
+        <div class="row" style="font-family: Quicksand, sans-serif;text-align: center;">
+            <!--  the card that repeats  -->
+            <% for (let category of categories) { %>
+                <div class="col-md-6 col-lg-3">
+                    <div class="card border-0" data-bs-hover-animate="pulse"><a href="category/<%= category.title %>"><img class="card-img-top scale-on-hover" src="<%= category.imageUrl %>" alt="Card Image"></a>
+                        <div class="card-body">
+                            <h6>
+                                <a href="category/<%= category.title %>" style="font-family: Quicksand, sans-serif;color:  #167cd0;">
+                                    <%= category.title %>
+                                </a>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+
+
+                    <!-- <div class="col-md-6 col-lg-3">
+                <div class="card border-0" data-bs-hover-animate="pulse"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/Screen%20Shot%202021-01-12%20at%209.05.14%20PM.png" alt="Card Image"></a>
+                    <div class="card-body">
+                        <h6><a href="#" style="font-family: Quicksand, sans-serif;">Meat and seafood</a></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0" data-bs-hover-animate="pulse"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/Screen%20Shot%202021-01-12%20at%209.06.05%20PM.png" alt="Card Image"></a>
+                    <div class="card-body">
+                        <h6><a href="#">Non-perishables</a></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0" data-bs-hover-animate="pulse"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/Screen%20Shot%202021-01-12%20at%209.06.57%20PM.png" alt="Card Image"></a>
+                    <div class="card-body">
+                        <h6><a href="#">Perishable ingredients</a></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0" data-bs-hover-animate="pulse"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/Screen%20Shot%202021-01-12%20at%209.07.10%20PM.png" alt="Card Image"></a>
+                    <div class="card-body">
+                        <h6><a href="#">Meal kits</a></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0" data-bs-hover-animate="pulse"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/Screen%20Shot%202021-01-12%20at%209.09.05%20PM.png" alt="Card Image"></a>
+                    <div class="card-body">
+                        <h6><a href="#">Sustainable options</a></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0" data-bs-hover-animate="pulse"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/Screen%20Shot%202021-01-12%20at%209.07.59%20PM.png" alt="Card Image"></a>
+                    <div class="card-body">
+                        <h6><a href="#">World foods</a></h6>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0" data-bs-hover-animate="pulse"><a href="#"><img class="card-img-top scale-on-hover" src="assets/img/Screen%20Shot%202021-01-12%20at%209.07.35%20PM.png" alt="Card Image"></a>
+                    <div class="card-body">
+                        <h6><a href="#">Alcoholic drinks</a></h6>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+    <div class="footer-basic">
+        <footer>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">malaika.aiyar@gmail.com (email for suggestions)</a></li>
+            </ul>
+            <p class="copyright">Malaika Aiyar © 2021</p>
+        </footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+</body>
+
+</html>
